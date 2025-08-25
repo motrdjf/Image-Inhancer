@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Image Enhancer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>AI Image Enhancer</h1>
+      <p class="description">Upload an image and enhance it using AI-based techniques.</p>
+    </header>
+
+    <section class="upload-section">
+      <div class="upload-area" onclick="document.getElementById('fileInput').click()">
+        <div class="upload-icon">📁</div>
+        <div class="upload-text">Click or drag an image to upload</div>
+        <div class="upload-hint">Supported formats: JPG, PNG</div>
+      </div>
+      <input type="file" id="fileInput" accept="image/*" onchange="previewImage(event)">
+      <button class="btn" onclick="enhanceImage()">Enhance Image</button>
+    </section>
+
+    <section class="image-comparison">
+      <div class="image-container">
+        <div class="image-label">Original</div>
+        <div class="image-wrapper">
+          <img id="originalImage" class="image-preview" alt="Original">
+          <div class="image-placeholder">No image uploaded</div>
+        </div>
+      </div>
+      <div class="image-container">
+        <div class="image-label">Enhanced</div>
+        <div class="image-wrapper">
+          <img id="enhancedImage" class="image-preview" alt="Enhanced">
+          <div class="image-placeholder">No enhancement yet</div>
+        </div>
+      </div>
+    </section>
+
+    <div id="status" class="status"></div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 AI Image Enhancer</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
